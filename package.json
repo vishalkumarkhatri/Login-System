@@ -1,0 +1,19 @@
+{
+  "name": "login-system",
+  "version": "1.0.0",
+  "description": "Login System using MySQL DB",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "@vishalkumarkhatri"
+  },
+  "author": "Vishal Kumar Khatri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  }
+}

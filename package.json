@@ -1,19 +1,17 @@
 {
-  "name": "login-system",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "path": "^0.12.7"
+  },
+  "name": "LOGIN-SYSTEM",
   "version": "1.0.0",
-  "description": "Login System using MySQL DB",
-  "main": "login.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "@vishalkumarkhatri"
-  },
   "author": "Vishal Kumar Khatri",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.21.2",
-    "mysql2": "^3.11.5"
-  }
+  "description": ""
 }

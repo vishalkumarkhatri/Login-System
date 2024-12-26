@@ -1,17 +1,21 @@
 {
-  "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "mysql2": "^3.12.0",
-    "path": "^0.12.7"
-  },
-  "name": "LOGIN-SYSTEM",
+  "name": "login-system",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vishalkumarkhatri/"
+  },
   "author": "Vishal Kumar Khatri",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "path": "^0.12.7"
+  }
 }

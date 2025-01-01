@@ -11,16 +11,13 @@ body {
     color: white;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
+.main-container{
     background: #007BFF;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 10px;
 }
-
-.login-container {
+.signup-container {
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
@@ -30,48 +27,18 @@ body {
     text-align: center;
 }
 
-.login-container h2 {
+.signup-container h2 {
     color: #007BFF;
     margin-bottom: 20px;
 }
 
-.login-container input {
+.signup-container input {
     width: 90%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-}
-
-.login-container button {
-    width: 90%;
-    padding: 10px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background: #0056b3;
-}
-
-.login-container p {
-    color: black
-}
-
-
-.signup-container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    height: 90px;
-    text-align: center;
 }
 
 .signup-container button {
@@ -87,8 +54,4 @@ body {
 
 .signup-container button:hover {
     background: #0056b3;
-}
-
-.signup-container p {
-    color: black;
 }

@@ -34,11 +34,11 @@ app.get("/", (req, res) => {
 });
 
 // Handle login request
-app.post("/", (req, res) => {
-    const { username: formUser, password: formPass } = req.body;
+app.post("/welcome", (req, res) => {
+    const { username: loginUser, password: loginPass } = req.body;
     const query = "SELECT * FROM userLogin WHERE user_name = ?";
 
-    connection.query(query, [formUser], async(err, results) => {
+    connection.query(query, [loginUser], async (err, results) => {
         if (err) {
             console.error("Database error:", err);
             return res.status(500).send("Some error in Database");
@@ -49,18 +49,45 @@ app.post("/", (req, res) => {
         }
 
         const user = results[0].user_pass;
-        
-        if (user !== formPass) {
+
+        if (user !== loginPass) {
             return res.status(401).send("Wrong Password");
         }
 
-        res.redirect("/welcome");
+        res.render("welcome.ejs")
     });
 });
 
-// Render welcome page
-app.get("/welcome", (req, res) => {
-    res.render("welcome.ejs");
+// Render sign up page
+app.get("/sign-up", (req, res) => {
+    // res.send("Sign Up")
+    res.render("signup.ejs");
+});
+
+// Handle sign up request
+app.post("/sign-up", (req, res) => {
+    let { username: signupUser, password: signupPass } = req.body;
+    let query = "SELECT * FROM userLogin WHERE user_name = ?";
+    connection.query(query, [signupUser], async (err, results) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).send("Some error in Database");
+        }
+
+        if (results.length !== 0) {
+            return res.status(401).send("Username already exists");
+        }
+
+        let q = `INSERT INTO userLogin(user_name, user_pass) VALUES(?,?)`;
+        connection.query(q, [signupUser, signupPass], (error, result) => {
+            if (error) {
+                console.error("Database error:", error);
+                return res.status(500).send("Some error in Databasessss");
+            }
+            console.log(result);
+            res.redirect("/")
+        });
+    });
 });
 
 // Start the server

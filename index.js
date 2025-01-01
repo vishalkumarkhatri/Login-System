@@ -60,7 +60,6 @@ app.post("/welcome", (req, res) => {
 
 // Render sign up page
 app.get("/sign-up", (req, res) => {
-    // res.send("Sign Up")
     res.render("signup.ejs");
 });
 
